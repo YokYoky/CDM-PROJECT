@@ -5,65 +5,119 @@
 #include <unistd.h>
 #include <iomanip>
 #include <stdio.h>
+#include <string>
+#include <conio.h>
 using namespace std;
 
 int main();
+void loading();
+void login();
+void acc_reg();
+void forgot();
+void delete_usr();
+void hello_world();
+void house();
+void lower_number();
+void higher_number();
+void avg_calcu();
+void calculator();
+void inc_loop();
+void dec_loop();
+void menu();
+void compilation();
+void group();
 
-void loadingBar(){
-    // 0 - black background,
-    // A - Green Foreground
-    system("color 0F");
+void group(){
+    system(" Color 0A ");
+	cout<<("\t\t\t\t\t\t                 ")<<endl;
+	cout<<("\t\t\t\t\t\t         млпллллм")<<endl;
+	cout<<("\t\t\t\t\t\t         лллллллл")<<endl;
+	cout<<("\t\t\t\t\t\t         лллллппп GROUP 3!!!")<<endl;
+	cout<<("\t\t\t\t\t\t л      мллллппп  CONSTANTINO")<<endl;
+	cout<<("\t\t\t\t\t\t ллм  мллллллммм  DELA CRUZ")<<endl;
+	cout<<("\t\t\t\t\t\t пллллллллллл  п  BAGASIN")<<endl;
+	cout<<("\t\t\t\t\t\t   плллллллп      UBALDE")<<endl;
+	cout<<("\t\t\t\t\t\t    ллп пл        AGCAOILI")<<endl;
+	cout<<("\t\t\t\t\t\t   лм   лм      ")<<endl;
+	cout<<("\t\t\t\t\t\t   плл  ппп    ")<<endl;
+	cout << "||=========       ||||     ||||==============     ||\\\\      ||         //===========\\\\ \n";
+	cout << "||         \\\\     ||||     ||||==============     || \\\\     ||       ||              ||\n";
+	cout << "||          ||    ||||     ||||                   ||  \\\\    ||       ||              ||\n";
+	cout << "||          ||    ||||     ||||                   ||   \\\\   ||       ||              ||\n";
+	cout << "||          ||    ||||     ||||                   ||    \\\\  ||       ||              ||\n";
+	cout << "||          ||    ||||     ||||                   ||     \\\\ ||       ||              ||\n";
+	cout << "||          ||    ||||     ||||==============     ||      \\\\||       ||==============||\n";
+	cout << "||          ||    ||||     ||||==============     ||       \\\\|       ||              ||\n";
+	cout << "||          ||    ||||     ||||                   ||        ||       ||              ||\n";
+	cout << "||          ||    ||||     ||||                   ||        ||       ||              ||\n";
+	cout << "||          ||    ||||     ||||                   ||        ||       ||              ||\n";
+	cout << "||          ||    ||||     ||||                   ||        ||       ||              ||\n";
+	cout << "||         //     ||||     ||||==============     ||        ||       ||              ||\n";
+	cout << "||=========       ||||     ||||==============     ||        ||       ||              ||\n";
+	sleep(6);
+	system("cls");
+}
 
-    // Initialize char for printing
-    // loading bar
-    char a = 177, b = 219;
 
-    printf("\n\n\n\n");
-    printf("\n\n\n\n\t\t\t\t\tLoading...\n\n");
-    printf("\t\t\t\t\t");
+void loading(){
+    system("color F");
+    char a = 219;
 
-    // Print initial loading bar
-    for (int i = 0; i < 26; i++)
-        printf("%c", a);
-
-
-    // Set the cursor again starting
-    // point of loading bar
-    printf("\r");
-    printf("\t\t\t\t\t");
-
-    // Print loading bar progress
-    for (int i = 0; i < 25; i++) {
-        printf("%c", b);
-
-        // Sleep for 1 second
-        Sleep(90);
+    char message[250] = "Opening program please wait . . .";
+    printf("\n\n\n");
+    printf("\n\n\n\t\t\t\t");
+    for(int i=0; message[i] != '\0'; i++){
+        cout <<message[i]<<"\xDB";
+        for (int j = 0; j < 50000000; j++);
+        cout<<"\b \b";
     }
 
+    printf("\t\t\t\t\n\n");
+    printf("\t\t\t\t");
+
+    for (int i = 0; i < 40; i++) {
+        printf("%c", a);
+
+        Sleep(50);
+    }
+    sleep(2);
     cout <<"\n";
+    cout << "\n\n\n\t\t\t\t";
+    system("pause");
 }
 
 
 void login(){
     bool login;
     int choice;
-    string username, password, usr, pwd;
+    char ch;
+    string username, password="", usr, pwd;
     system("cls");
 
 
     while(login==false){
-        cout << "_________________________________\n\n";
-        cout << "\t     LOGIN\n";
-        cout << "_________________________________\n\n";
-        cout << "Username: ";
+        cout << "\n\n\t\t\t-----------------------------------------------";
+        cout << "\n\t\t\t|                   LOGIN                     |\n\t\t\t-----------------------------------------------\n";
+        cout << "\n\t\t\t Note: Password is invisible.\n";
+        sleep(1);
+        cout << "\n\n\t\t\t    Username: ";
         cin >> username;
         HANDLE hStdin = GetStdHandle(STD_INPUT_HANDLE);
         DWORD mode = 0;
         GetConsoleMode(hStdin, &mode);
         SetConsoleMode(hStdin, mode & (~ENABLE_ECHO_INPUT));
-        cout << "Password: ";
+        cout << "\t\t\t    Password: ";
         cin >> password;
-
+        cout << endl;
+        cout << "\n\n\t\t\t Verifying";
+        sleep(1);
+        cout << ".";
+        sleep(1);
+        cout << ".";
+        sleep(1);
+        cout << ".";
+        cout << "\n";
+        sleep(1);
 
         ifstream login_creds("credentials.txt");
         while(login_creds >> usr >> pwd){
@@ -74,98 +128,200 @@ void login(){
         login_creds.close();
 
         if(login == false){
-            cout << "Incorrect Username or Password, Please try again.\n";
-            cout << "(1) TRY AGAIN (0) MENU\nAnswer: ";
+        	sleep(1);
+        	system("cls");
+        	cout << "\n\n\t\t\t-----------------------------------------------";
+            cout << "\n\t\t\t|                   LOGIN                     |\n\t\t\t-----------------------------------------------\n";
+            cout << "\n\t\t\t Oops! Incorrect password. Please try again.\n";
+            sleep(1.5);
+            cout << "\n\n\t\t\t   (1) Try Again";
+            cout << "\n\t\t\t   (0) Back\n";
+            cout << "\n\n\t\t\t Choice: ";
             cin >> choice;
-            if(choice == 1){
-                login = false;
-                cout << "Loading ";
-                sleep(1);
-                cout <<".";
-                sleep(1);
-                cout <<".";
-                sleep(1);
-                cout <<".";
-                system("cls");
-            }
-            else{
-                sleep(1);
-                system("cls");
-                main();
+            sleep(2);
 
+            if(choice==1){
+                login = false;
             }
+            else if(choice==0){
+                menu();
+            }
+
+            system("cls");
         }
         else{
             system("cls");
-            cout << "Login succesfully.";
+            sleep(1);
+            cout << "\n   Redirecting";
             sleep(1);
             cout << ".";
             sleep(1);
             cout << ".";
             sleep(1);
             cout << ".";
+            sleep(2);
+            compilation();
         }
     }
 }
 
+
 void acc_reg(){
     bool accReg;
+    int choice;
     string regUser, regPass, usr_reg, pwd_reg;
     system("cls");
 
-    cout << "_________________________________\n\n";
-    cout << "\t     REGISTER\n";
-    cout << "_________________________________\n\n";
-    cout << "Enter Username: ";
+    cout << "\n\n\t\t\t-----------------------------------------------";
+    cout << "\n\t\t\t|                  REGISTER                   |\n\t\t\t-----------------------------------------------\n";
+    cout << "\n\n\t\t\t    Enter Username: ";
     cin >> regUser;
-    cout << "Enter Password: ";
+    cout << "\t\t\t    Enter Password: ";
     cin >> regPass;
+    cout << endl;
+    cout << "\n\t\t\t Verifying account";
+    sleep(1);
+    cout << ".";
+    sleep(1);
+    cout << ".";
+    sleep(1);
+    cout << ".";
+    cout << "\n";
+    sleep(1);
 
     ofstream reg("credentials.txt", ios::app);
     ifstream acc("credentials.txt", ios::app);
     while(acc >> usr_reg >> pwd_reg){
-            if(usr_reg == regUser && pwd_reg == regPass){
+            if(usr_reg == regUser){
                 accReg = true;
             }
         }
     if(accReg==false){
+        system("cls");
         reg << regUser << ' ' << regPass << endl;
-        cout << "\nRegistration Succesful";
+        cout << "\n\n\t\t\t-----------------------------------------------";
+        cout << "\n\t\t\t|                  REGISTER                   |\n\t\t\t-----------------------------------------------\n";
+        cout << "\n\t\t\t Access Granted!\n\n";
+        sleep(1.5);
+        cout << "\n\t\t\t  (1) Login";
+        cout << "\n\t\t\t  (0) Back\n";
+        cout << "\n\n\t\t\t Choice: ";
+        cin >> choice;
         sleep(2);
+
+        if(choice==1){
+            login();
+            system("cls");
+            sleep(2);
+        }
+        else{
+            system("cls");
+            menu();
+        }
     }
     else{
-        cout << "\nUsername already exist\n";
+        system("cls");
+        cout << "\n\n\t\t\t-----------------------------------------------";
+        cout << "\n\t\t\t|                  REGISTER                   |\n\t\t\t-----------------------------------------------\n";
+        cout << "\n\t\t\t Username already exist.\n";
+        sleep(1.5);
+        cout << "\n\n\t\t\t   (1) Try Again";
+        cout << "\n\t\t\t   (0) Back\n";
+        cout << "\n\n\t\t\t Choice: ";
+        cin >> choice;
+        sleep(1);
+        if(choice==1){
+            acc_reg();
+        }
+        else if(choice == 0){
+            menu();
+        }
+        else{
+            cout << "Invalid input.\n";
+        }
     }
 }
+
 
 void forgot(){
     bool forgot_pwd;
     string find_user, su, sp;
+    int choice;
     system("cls");
-
-    cout << "Enter Username: ";
-    cin >> find_user;
+    cout << "\n\n\t\t\t-----------------------------------------------";
+    cout << "\n\t\t\t|              FORGOT PASSWORD                |\n\t\t\t-----------------------------------------------\n";
+        sleep(1);
+        cout << "\n\n\t\t\t    Enter Username: ";
+        cin >> find_user;
+        cout << endl;
+        cout << "\n\t\t\t Searching";
+        sleep(1);
+        cout << ".";
+        sleep(1);
+        cout << ".";
+        sleep(1);
+        cout << ".";
+        cout << "\n";
+        sleep(1);
 
     ifstream findUser("credentials.txt");
     while(findUser >> su >> sp){
         if(su == find_user){
-            forgot_pwd = true;
-        }
+            sleep(1);
+            system("cls");
+            cout << "\n\n\t\t\t-----------------------------------------------";
+            cout << "\n\t\t\t|              FORGOT PASSWORD                |\n\t\t\t-----------------------------------------------\n";
+            cout << "\n\t\t\t Account Found!\n";
+            sleep(1);
+            cout << "\t\t\t Your password is: "<< sp;
+            sleep(1.5);
+            cout << "\n\n\n\t\t\t  (1) Login";
+            cout << "\n\t\t\t  (0) Back\n";
+            cout << "\n\n\t\t\t Choice: ";
+            cin >> choice;
+            sleep(2);
+
+            if(choice==1){
+                login();
+                system("cls");
+                sleep(2);
+            }
+            else{
+                system("cls");
+                menu();
+            }
+                forgot_pwd = true;
+            }
     }
     findUser.close();
-    if(forgot_pwd == true){
-        cout << "\nAccount Found\nYour password is: " << sp;
-    }
-    else{
-        cout << "Username does not exist!\nTry again.";
+    if(forgot_pwd == false){
+        system("cls");
+        cout << "\n\n\t\t\t-----------------------------------------------";
+        cout << "\n\t\t\t|              FORGOT PASSWORD                |\n\t\t\t-----------------------------------------------\n";
+        cout << "\n\t\t\t Account does not exist.\n";
+        sleep(1.5);
     }
 }
 
+
 void delete_usr(){
     string name, usr, pwd;
-
-    cout << "enter username to delete: ";
-    cin>>name;
+    system("cls");
+    cout << "\n\n\t\t\t-----------------------------------------------";
+    cout << "\n\t\t\t|            DELETE ACCOUNT              |\n\t\t\t-----------------------------------------------\n";
+    sleep(1);
+    cout << "\n\n\t\t\t    Enter username to delete: ";
+    cin>> name;
+    cout << endl;
+    cout << "\n\t\t\t Deleting Account";
+    sleep(1);
+    cout << ".";
+    sleep(1);
+    cout << ".";
+    sleep(1);
+    cout << ".";
+    cout << "\n";
+    sleep(1);
 
     ifstream creds;
     creds.open("credentials.txt");
@@ -180,7 +336,12 @@ void delete_usr(){
             temp << usr<< " "<<pwd<<endl;
         }
         else{
-            cout << "Account deleted\n";
+            sleep(1);
+            system("cls");
+            cout << "\n\n\t\t\t-----------------------------------------------";
+            cout << "\n\t\t\t|            DELETE ACCOUNT              |\n\t\t\t-----------------------------------------------\n";
+            cout << "\n\t\t\t Account deleted.\n";
+            sleep(1.5);
         }
         creds >> usr;
         creds >> pwd;
@@ -192,9 +353,11 @@ void delete_usr(){
     rename("temp.txt", "credentials.txt");
 }
 
+
 void hello_world(){
     cout << "Hello World!\n";
 }
+
 
 void house(){
     cout << "\t " << endl;
@@ -228,7 +391,7 @@ void house(){
 
 
 void lower_number(){
-    int value1, value2,value3, value4;
+    double value1, value2,value3, value4;
     cout << "Input Value Number 1: ";
     cin >> value1;
     cout << "Input Value Number 2: ";
@@ -238,21 +401,22 @@ void lower_number(){
     cout << "Input Value Number 4: ";
     cin >> value4;
     if (value1 < value2 && value1 < value3 && value1 < value4 ) {
-        cout<<"A IS A LOWER NUMBER\n" << endl ;
+        cout<< value1 << " is the lowest number. " << endl ;
     }
     else if (value2 < value1 && value2 < value3 && value3 < value4){
-        cout<< "B IS A LOWER NUMBER\n" ;
+        cout<< value2 <<  " is the lowest number. " ;
     }
     else if (value3 < value1 && value3 < value2 && value3 < value4){
-        cout<< "C IS A LOWER NUMBER\n" ;
+        cout<< value3 << " is the lowest number. " ;
     }
     else{
-        cout<< "D IS A LOWER NUMBER\n";
+        cout<< value4 << " is the lowest number. ";
     }
 }
 
+
 void higher_number(){
-    int value1, value2,value3, value4;
+    double value1, value2,value3, value4;
     cout << "Input Value Number 1: ";
     cin >> value1;
     cout << "Input Value Number 2: ";
@@ -261,76 +425,72 @@ void higher_number(){
     cin >> value3;
     cout << "Input Value Number 4: ";
     cin >> value4;
+
     if (value1 > value2 && value1 > value3 && value1 > value4 ) {
-        cout<<"A IS A LOWER NUMBER\n" << endl ;
+        cout<< value1 << " is the highest number. " << endl ;
     }
     else if (value2 > value1 && value2 > value3 && value3 > value4){
-        cout<< "B IS A LOWER NUMBER\n" ;
+        cout<< value2 <<  " is the highest number. " ;
     }
     else if (value3 > value1 && value3 > value2 && value3 > value4){
-        cout<< "C IS A LOWER NUMBER\n" ;
+        cout<< value3 << " is the highest number. " ;
     }
     else{
-        cout<< "D IS A LOWER NUMBER\n";
+        cout<< value4 << " is the highest number. ";
     }
 }
+
 
 void avg_calcu(){
-    string Name;
-    int number_of_activities;
-    double g1, g2, g3, g4, avg;
+    int number_of_grades;
+    double grade, sum=0, avg;
 
-    cout << "Enter Name: ";
-    cin >> Name;
-
-    cout << "Enter number of activities: ";
-    cin >> number_of_activities;
+    cout << "Enter number of grades: ";
+    cin >> number_of_grades;
     cout << endl;
 
-    cout << "Enter your 1st grade: ";
-    cin >> g1;
-    cout << "Enter your 2nd grade: ";
-    cin >> g2;
-    cout << "Enter your 3rd grade: ";
-    cin >> g3;
+    for(int i = 1; i <= number_of_grades; i++){
+        cout << "Enter grade no."<< i <<" : ";
+        cin >> grade;
+        sum = sum + grade; // getting the sum of grade input
+    }
 
-    cout << "Enter your 4th grade: ";
-    cin >> g4;
-    cout << endl;
-    // computation of avg
-    avg = (g1+g2+g3+g4)/number_of_activities;
-    // if else statement for avg
-    if(avg == 100 && avg >= 98){ // if the condition is TRUE run the code which is cout, if FALSE check the next condition else if, and so on.
-        cout << "Hi, " << Name << " your average " << avg << " is equivalent to 1.00" << endl;
+
+    avg = sum / number_of_grades;
+
+
+    if(avg == 100 && avg >= 98){
+        cout << "\n\nYour average " << avg << " is equivalent to 1.00" << endl;
     }
     else if(avg <= 97 && avg >=95){
-        cout << "Hi, " << Name << " your average " << avg << " is equivalent to 1.25" << endl;
+        cout << "\n\nYour average " << avg << " is equivalent to 1.25" << endl;
     }
     else if(avg <= 94 && avg >=91){
-        cout << "Hi, " << Name << " your average " << avg << " is equivalent to 1.50" << endl;
+        cout << "\n\nYour   w average " << avg << " is equivalent to 1.50" << endl;
     }
     else if(avg <= 90 && avg >=88){
-        cout << "Hi, " << Name << " your average " << avg << " is equivalent to 1.75" << endl;
+        cout << "\n\nYour average " << avg << " is equivalent to 1.75" << endl;
     }
     else if(avg <= 87 && avg >=85){
-        cout << "Hi, " << Name << " your average " << avg << " is equivalent to 2.00" << endl;
+        cout << "\nYour average " << avg << " is equivalent to 2.00" << endl;
     }
     else if(avg <= 84 && avg >=82){
-        cout << "Hi, " << Name << " your average " << avg << " is equivalent to 2.25" << endl;
+        cout << "\nYour average " << avg << " is equivalent to 2.25" << endl;
     }
     else if(avg <= 81 && avg >=79){
-        cout << "Hi, " << Name << " your average " << avg << " is equivalent to 2.50" << endl;
+        cout << "\nYour average " << avg << " is equivalent to 2.50" << endl;
     }
     else if(avg <= 76 && avg >=78){
-        cout << "Hi, " << Name << " your average " << avg << " is equivalent to 2.75" << endl;
+        cout << "\nYour average " << avg << " is equivalent to 2.75" << endl;
     }
     else if(avg == 75){
-        cout << "Hi, " << Name << " your average " << avg << " is equivalent to 3.00" << endl;
+        cout << "\nYour average " << avg << " is equivalent to 3.00" << endl;
     }
     else{ // if all condition above are not met
-        cout << "Hi, " << Name << " your average " << avg << " is equivalent to 5.00" << endl;
+        cout << "\nYour average " << avg << " is equivalent to 5.00" << endl;
     }
 }
+
 
 void calculator(){
     char op_input;
@@ -360,277 +520,292 @@ void calculator(){
         cout << num1 << " / " << num2 << " = " << result << endl;
     }
     else{
-        cout << "INVALID OPERATOR\n";
+        cout << "Invalid operator.\n";
     }
 }
 
+
 void inc_loop(){
-    int endv, start;
+    int start, endv;
 
-    cout << "Enter higher value to increment: ";
+	cout << "Note: Starting value must be lower than limit.";
+	cout << endl;
+    cout << "Enter starting value: ";
     cin >> start;
-    cout << "Enter lower value to increment: ";
+    cout << "Enter limit: ";
     cin >> endv;
-
-
-    for(int i = endv; i <= start; i++){
+	cout << "\n";
+    for(int i = start; i <= endv; i++){
         cout << i << endl;
     }
 }
+
 
 void dec_loop(){
     int endv, start;
-
-    cout << "Enter higher value to decrement: ";
+	cout << "Note: Starting point must be lower than end value.";
+	cout << endl;
+	cout << endl;
+	cout << "Enter starting point: ";
     cin >> start;
-    cout << "Enter lower value to decrement: ";
+    cout << "Enter end value: ";
     cin >> endv;
 
-    for(int i = start; i >= endv; i--){
+    for(int i = endv; i >= start; i--){
         cout << i << endl;
     }
+
 }
 
-int main(){
 
+void compilation(){
     int menuChoice;
-    loadingBar();
+
+    do{
+        system("cls");
+        cout << "\n\n\t\t\t-----------------------------------------------";
+        cout << "\n\t\t\t|          CDM PROGRAMMING ACTIVIES          |\n\t\t\t-----------------------------------------------\n";
+        cout << "\n\t\t\t\t(1) Hello World\n";
+        cout << "\t\t\t\t(2) House\n";
+        cout << "\t\t\t\t(3) Lower Number Identifier\n";
+        cout << "\t\t\t\t(4) Higher Number Identifier\n";
+        cout << "\t\t\t\t(5) Average Grade Calculator\n";
+        cout << "\t\t\t\t(6) Calculator\n";
+        cout << "\t\t\t\t(7) Increment Looping\n";
+        cout << "\t\t\t\t(8) Decrement Looping\n";
+        cout << "\t\t\t\t(0) Logout\n";
+        cout << "\n\t\t\t_______________________________________________\n";
+        cout << "\n\t\t\tChoice (0-8): ";
+        cin >> menuChoice;
+        sleep(2);
+        system("cls");
+
+        if(menuChoice==1){
+            do{
+                hello_world();
+                cout << "(1) Display again\n";
+                cout << "(0) Back\n";
+                cout << "Choice: ";
+                cin >> menuChoice;
+                system("cls");
+                cout << "Loading ";
+                sleep(1);
+                cout << ".";
+                sleep(1);
+                cout << ".";
+                sleep(1);
+                cout << ".";
+                system("cls");
+            }while(menuChoice==1);
+
+        }
+        else if(menuChoice==2){
+            do{
+                house();
+                cout << "(1) Display again\n";
+                cout << "(0) Back\n";
+                cout << "Choice: ";
+                cin >> menuChoice;
+                system("cls");
+                cout << "Loading ";
+                sleep(1);
+                cout << ".";
+                sleep(1);
+                cout << ".";
+                sleep(1);
+                cout << ".";
+                system("cls");
+            }while(menuChoice==1);
+        }
+        else if(menuChoice==3){
+            do{
+                lower_number();
+                cout << "(1) Display again\n";
+                cout << "(0) Back\n";
+                cout << "Choice: ";
+                cin >> menuChoice;
+                system("cls");
+                cout << "Loading ";
+                sleep(1);
+                cout << ".";
+                sleep(1);
+                cout << ".";
+                sleep(1);
+                cout << ".";
+                system("cls");
+            }while(menuChoice==1);
+        }
+        else if(menuChoice==4){
+            do{
+                higher_number();
+                cout << "(1) Display again\n";
+                cout << "(0) Back\n";
+                cout << "Choice: ";
+                cin >> menuChoice;
+                system("cls");
+                cout << "Loading ";
+                sleep(1);
+                cout << ".";
+                sleep(1);
+                cout << ".";
+                sleep(1);
+                cout << ".";
+                system("cls");
+            }while(menuChoice==1);
+        }
+        else if(menuChoice==5){
+            do{
+                avg_calcu();
+                cout << "(1) Display again\n";
+                cout << "(0) Back\n";
+                cout << "Choice: ";
+                cin >> menuChoice;
+                system("cls");
+                cout << "Loading ";
+                sleep(1);
+                cout << ".";
+                sleep(1);
+                cout << ".";
+                sleep(1);
+                cout << ".";
+                system("cls");
+            }while(menuChoice==1);
+        }
+        else if(menuChoice==6){
+            do{
+                calculator();
+                cout << "(1) Display again\n";
+                cout << "(0) Back\n";
+                cout << "Choice: ";
+                cin >> menuChoice;
+                system("cls");
+                cout << "Loading ";
+                sleep(1);
+                cout << ".";
+                sleep(1);
+                cout << ".";
+                sleep(1);
+                cout << ".";
+                system("cls");
+            }while(menuChoice==1);
+        }
+        else if(menuChoice==7){
+            do{
+                inc_loop();
+                cout << "(1) Display again\n";
+                cout << "(0) Back\n";
+                cout << "Choice: ";
+                cin >> menuChoice;
+                system("cls");
+                cout << "Loading ";
+                sleep(1);
+                cout << ".";
+                sleep(1);
+                cout << ".";
+                sleep(1);
+                cout << ".";
+                system("cls");
+            }while(menuChoice==1);
+        }
+        else if(menuChoice==8){
+            do{
+                dec_loop();
+                cout << "(1) Display again\n";
+                cout << "(0) Back\n";
+                cout << "Choice: ";
+                cin >> menuChoice;
+                system("cls");
+                cout << "Loading ";
+                sleep(1);
+                cout << ".";
+                sleep(1);
+                cout << ".";
+                sleep(1);
+                cout << ".";
+                system("cls");
+            }while(menuChoice==1);
+        }
+        else if(menuChoice==0){
+            menu();
+        }
+        else{
+            cout << "Invalid input, Try again\nMenu\n\n";
+            compilation();
+            system("cls");
+        }
+    }while(menuChoice==0);
+}
+
+
+void menu(){
+    int menuChoice;
     system("cls");
     do{
-        cout << "_________________________________\n\n";
-        cout << "\t     MENU\n";
-        cout << "_________________________________\n\n";
-        cout << "\t(1) Login\n";
-        cout << "\t(2) Register\n";
-        cout << "\t(3) Forgot Password\n";
-        cout << "\t(4) Delete Account\n";
-        cout << "\t(5) Exit Program\n";
-        cout << endl;
-        cout << "Choice: ";
+        cout << "\n\n\t\t\t-----------------------------------------------";
+        cout << "\n\t\t\t|                  MAIN MENU                  |\n\t\t\t-----------------------------------------------\n";
+        cout << "\n\t\t\t\t(1) Login";
+        cout << "\n\t\t\t\t(2) Register";
+        cout << "\n\t\t\t\t(3) Forgot Password";
+        cout << "\n\t\t\t\t(4) Delete Account";
+        cout << "\n\t\t\t\t(5) Exit Program\n";
+        cout << "\n\t\t\t_______________________________________________\n";
+        cout << "\n\t\t\tChoice: ";
         cin >> menuChoice;
+        sleep(1);
 
         switch(menuChoice){
             case 1:
                 login();
                 system("cls");
-
-                do{
-                    cout << "________________________________________\n\n";
-                    cout << "\tCDM PROGRAM ACTIVITIES\n";
-                    cout << "________________________________________\n\n";
-                    cout << "(1) Hello World\n";
-                    cout << "(2) House\n";
-                    cout << "(3) Lower Number Identifier\n";
-                    cout << "(4) Higher Number Identifier\n";
-                    cout << "(5) Average Calculator With Equivalent Grade\n";
-                    cout << "(6) Calculator\n";
-                    cout << "(7) Increment Looping\n";
-                    cout << "(8) Decrement Looping\n";
-                    cout << "(0) Logout\n";
-                    cout << "Enter your choice (1-8): ";
-                    cin >> menuChoice;
-                    sleep(2.5);
-                    system("cls");
-
-                    if(menuChoice==1){
-                        do{
-                            hello_world();
-                            cout << "(0) Display again\n";
-                            cout << "(1) Back\n";
-                            cin >> menuChoice;
-
-                            cout << "Loading ";
-                            sleep(1);
-                            cout << ".";
-                            sleep(1);
-                            cout << ".";
-                            sleep(1);
-                            cout << ".";
-                            system("cls");
-                        }while(menuChoice==0);
-
-                    }
-                    else if(menuChoice==2){
-                        do{
-                            house();
-                            cout << "(0) Display again\n";
-                            cout << "(1) Back\n";
-                            cin >> menuChoice;
-                            cout << "Loading ";
-                            sleep(1);
-                            cout << ".";
-                            sleep(1);
-                            cout << ".";
-                            sleep(1);
-                            cout << ".";
-                            system("cls");
-                        }while(menuChoice==0);
-                    }
-                    else if(menuChoice==3){
-                        do{
-                            lower_number();
-                            cout << "(0) Display again\n";
-                            cout << "(1) Back\n";
-                            cin >> menuChoice;
-                            cout << "Loading ";
-                            sleep(1);
-                            cout << ".";
-                            sleep(1);
-                            cout << ".";
-                            sleep(1);
-                            cout << ".";
-                            system("cls");
-                        }while(menuChoice==0);
-                    }
-                    else if(menuChoice==4){
-                        do{
-                            higher_number();
-                            cout << "(0) Display again\n";
-                            cout << "(1) Back\n";
-                            cin >> menuChoice;
-                            cout << "Loading ";
-                            sleep(1);
-                            cout << ".";
-                            sleep(1);
-                            cout << ".";
-                            sleep(1);
-                            cout << ".";
-                            system("cls");
-                        }while(menuChoice==0);
-                    }
-                    else if(menuChoice==5){
-                        do{
-                            avg_calcu();
-                            cout << "(0) Display again\n";
-                            cout << "(1) Back\n";
-                            cin >> menuChoice;
-                            cout << "Loading ";
-                            sleep(1);
-                            cout << ".";
-                            sleep(1);
-                            cout << ".";
-                            sleep(1);
-                            cout << ".";
-                            system("cls");
-                        }while(menuChoice==0);
-                    }
-                    else if(menuChoice==6){
-                        do{
-                            calculator();
-                            cout << "(0) Display again\n";
-                            cout << "(1) Back\n";
-                            cin >> menuChoice;
-                            cout << "Loading ";
-                            sleep(1);
-                            cout << ".";
-                            sleep(1);
-                            cout << ".";
-                            sleep(1);
-                            cout << ".";
-                            system("cls");
-                        }while(menuChoice==0);
-                    }
-                    else if(menuChoice==7){
-                        do{
-                            inc_loop();
-                            cout << "(0) Display again\n";
-                            cout << "(1) Back\n";
-                            cin >> menuChoice;
-                            cout << "Loading ";
-                            sleep(1);
-                            cout << ".";
-                            sleep(1);
-                            cout << ".";
-                            sleep(1);
-                            cout << ".";
-                            system("cls");
-                        }while(menuChoice==0);
-                    }
-                    else if(menuChoice==8){
-                        do{
-                            dec_loop();
-                            cout << "(0) Display again\n";
-                            cout << "(1) Back\n";
-                            cin >> menuChoice;
-                            cout << "Loading ";
-                            sleep(1);
-                            cout << ".";
-                            sleep(1);
-                            cout << ".";
-                            sleep(1);
-                            cout << ".";
-                            system("cls");
-                        }while(menuChoice==0);
-                    }
-                    else if(menuChoice==0){
-                        cout << "Logging out";
-                        sleep(1);
-                        cout << ".";
-                        sleep(1);
-                        cout << ".";
-                        sleep(1);
-                        cout << ".";
-                        system("cls");
-                    }
-                    else{
-                        cout << "invalid input, Try again\n(1) Menu\n(0) logout\n";
-                        cin >> menuChoice;
-                    }
-                }while(menuChoice==1);
+                compilation();
                 break;
             case 2:
                 do{
                     acc_reg();
-                    cout << "\n(1) Display again\n";
+                    cout << "\n(1) Try again\n";
                     cout << "(0) Back\n";
                     cin >> menuChoice;
-                    cout << "Loading ";
-                    sleep(1);
-                    cout << ".";
-                    sleep(1);
-                    cout << ".";
-                    sleep(1);
-                    cout << ".";
+                    sleep(2);
                     system("cls");
                 }while(menuChoice==1);
                 break;
             case 3:
                 do{
                     forgot();
-                    cout << "\n(1) Display again\n";
-                    cout << "(0) Back\n";
+                    cout << "\n\n\t\t\t  (1) Try again\n";
+                    cout << "\t\t\t  (0) Back\n";
+                    cout << "\n\n\t\t\t Choice: ";
                     cin >> menuChoice;
-                    cout << "Loading ";
-                    sleep(1);
-                    cout << ".";
-                    sleep(1);
-                    cout << ".";
-                    sleep(1);
-                    cout << ".";
+                    sleep(2);
                     system("cls");
                 }while(menuChoice==1);
                 break;
             case 4:
                 do{
                     delete_usr();
-                    cout << "\n(1) Display again\n";
-                    cout << "(0) Back\n";
+                    cout << "\n\n\t\t\t  (1) Try again\n";
+                    cout << "\t\t\t  (0) Back\n";
+                    cout << "\n\n\t\t\t Choice: ";
                     cin >> menuChoice;
-                    cout << "Loading ";
-                    sleep(1);
-                    cout << ".";
-                    sleep(1);
-                    cout << ".";
-                    sleep(1);
-                    cout << ".";
+                    sleep(2);
                     system("cls");
                 }while(menuChoice==1);
             case 5:
-                return 0;
+                break;
             default:
-                cout << "error\n";
-                main();
+                menu();
                 break;
         }
     }while(menuChoice==0);
+}
+
+
+int main(){
+
+    int menuChoice;
+    group();
+    loading();
+    menu();
+    system("cls");
+
 }
