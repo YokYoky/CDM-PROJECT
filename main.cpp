@@ -54,7 +54,7 @@ void group(){
 	cout << "||          ||    ||||     ||||                   ||        ||       ||              ||\n";
 	cout << "||         //     ||||     ||||==============     ||        ||       ||              ||\n";
 	cout << "||=========       ||||     ||||==============     ||        ||       ||              ||\n";
-	sleep(6);
+	sleep(5);
 	system("cls");
 }
 
@@ -78,7 +78,7 @@ void loading(){
     for (int i = 0; i < 40; i++) {
         printf("%c", a);
 
-        Sleep(50);
+        Sleep(40);
     }
     sleep(2);
     cout <<"\n";
@@ -159,7 +159,8 @@ void login(){
             cout << ".";
             sleep(1);
             cout << ".";
-            sleep(2);
+            sleep(1);
+            system("cls");
             compilation();
         }
     }
@@ -306,19 +307,19 @@ void forgot(){
 
 void delete_usr(){
     string name, usr, pwd;
+    sleep(1);
     system("cls");
     cout << "\n\n\t\t\t-----------------------------------------------";
-    cout << "\n\t\t\t|            DELETE ACCOUNT              |\n\t\t\t-----------------------------------------------\n";
-    sleep(1);
+    cout << "\n\t\t\t|               DELETE ACCOUNT               |\n\t\t\t-----------------------------------------------\n";
     cout << "\n\n\t\t\t    Enter username to delete: ";
     cin>> name;
     cout << endl;
-    cout << "\n\t\t\t Deleting Account";
+    cout << "\n\n\t\t\t Deleting Account";
     sleep(1);
     cout << ".";
-    sleep(1);
+    sleep(2);
     cout << ".";
-    sleep(1);
+    sleep(2);
     cout << ".";
     cout << "\n";
     sleep(1);
@@ -351,6 +352,7 @@ void delete_usr(){
 
     remove("credentials.txt");
     rename("temp.txt", "credentials.txt");
+
 }
 
 
@@ -391,52 +393,52 @@ void house(){
 
 
 void lower_number(){
-    double value1, value2,value3, value4;
-    cout << "Input Value Number 1: ";
-    cin >> value1;
-    cout << "Input Value Number 2: ";
-    cin >> value2;
-    cout << "Input Value Number 3: ";
-    cin >> value3;
-    cout << "Input Value Number 4: ";
-    cin >> value4;
-    if (value1 < value2 && value1 < value3 && value1 < value4 ) {
-        cout<< value1 << " is the lowest number. " << endl ;
+    double v1, v2,v3, v4;
+    cout << "\n\t\t\t Input Value Number 1: ";
+    cin >> v1;
+    cout << "\t\t\t Input Value Number 2: ";
+    cin >> v2;
+    cout << "\t\t\t Input Value Number 3: ";
+    cin >> v3;
+    cout << "\t\t\t Input Value Number 4: ";
+    cin >> v4;
+    if (v1 < v2 && v1 < v3 && v1 < v4 ) {
+        cout << "\n\n\t\t\t " << v1 << " is the lowest number. " << endl ;
     }
-    else if (value2 < value1 && value2 < value3 && value3 < value4){
-        cout<< value2 <<  " is the lowest number. " ;
+    else if (v2 < v1 && v2 < v3 && v3 < v4){
+        cout << "\n\n\t\t\t " << v2 <<  " is the lowest number. " ;
     }
-    else if (value3 < value1 && value3 < value2 && value3 < value4){
-        cout<< value3 << " is the lowest number. " ;
+    else if (v3 < v1 && v3 < v2 && v3 < v4){
+        cout << "\n\n\t\t\t " << v3 << " is the lowest number. " ;
     }
     else{
-        cout<< value4 << " is the lowest number. ";
+        cout << "\n\n\t\t\t " << v4 << " is the lowest number. ";
     }
 }
 
 
 void higher_number(){
-    double value1, value2,value3, value4;
-    cout << "Input Value Number 1: ";
-    cin >> value1;
-    cout << "Input Value Number 2: ";
-    cin >> value2;
-    cout << "Input Value Number 3: ";
-    cin >> value3;
-    cout << "Input Value Number 4: ";
-    cin >> value4;
+    double v1, v2,v3, v4;
+    cout << "\n\t\t\t Input Value Number 1: ";
+    cin >> v1;
+    cout << "\t\t\t Input Value Number 2: ";
+    cin >> v2;
+    cout << "\t\t\t Input Value Number 3: ";
+    cin >> v3;
+    cout << "\t\t\t Input Value Number 4: ";
+    cin >> v4;
 
-    if (value1 > value2 && value1 > value3 && value1 > value4 ) {
-        cout<< value1 << " is the highest number. " << endl ;
+    if (v1 > v2 && v1 > v3 && v1 > v4 ) {
+        cout << "\n\n\t\t\t " << v1 << " is the highest number. " << endl ;
     }
-    else if (value2 > value1 && value2 > value3 && value3 > value4){
-        cout<< value2 <<  " is the highest number. " ;
+    else if (v2 > v1 && v2 > v3 && v3 > v4){
+        cout << "\n\n\t\t\t " << v2 <<  " is the highest number. " ;
     }
-    else if (value3 > value1 && value3 > value2 && value3 > value4){
-        cout<< value3 << " is the highest number. " ;
+    else if (v3 > v1 && v3 > v2 && v3 > v4){
+        cout << "\n\n\t\t\t " << v3 << " is the highest number. " ;
     }
     else{
-        cout<< value4 << " is the highest number. ";
+        cout << "\n\n\t\t\t " << v4 << " is the highest number. ";
     }
 }
 
@@ -445,49 +447,61 @@ void avg_calcu(){
     int number_of_grades;
     double grade, sum=0, avg;
 
-    cout << "Enter number of grades: ";
+    cout << "\n\t\t\t Enter number of grades: ";
     cin >> number_of_grades;
     cout << endl;
-
     for(int i = 1; i <= number_of_grades; i++){
-        cout << "Enter grade no."<< i <<" : ";
+        cout << "\t\t\t Enter grade no."<< i <<" : ";
         cin >> grade;
         sum = sum + grade; // getting the sum of grade input
     }
 
-
     avg = sum / number_of_grades;
 
+    system("cls");
+    cout << "\n\n\t\t\t-----------------------------------------------";
+    cout << "\n\t\t\t|          AVERAGE GRADE CALCULATOR           |\n\t\t\t-----------------------------------------------\n\n";
+    cout << "\n\t\t\t Calculating";
+    sleep(1);
+    cout << ".";
+    sleep(1);
+    cout << ".";
+    sleep(1);
+    cout << ".";
+    system("cls");
+
+    cout << "\n\n\t\t\t-----------------------------------------------";
+    cout << "\n\t\t\t|          AVERAGE GRADE CALCULATOR           |\n\t\t\t-----------------------------------------------\n\n";
 
     if(avg == 100 && avg >= 98){
-        cout << "\n\nYour average " << avg << " is equivalent to 1.00" << endl;
+        cout << "\n\n\t\t\tYour average " << avg << " is equivalent to 1.00" << endl;
     }
     else if(avg <= 97 && avg >=95){
-        cout << "\n\nYour average " << avg << " is equivalent to 1.25" << endl;
+        cout << "\n\n\t\t\t Your average " << avg << " is equivalent to 1.25" << endl;
     }
     else if(avg <= 94 && avg >=91){
-        cout << "\n\nYour   w average " << avg << " is equivalent to 1.50" << endl;
+        cout << "\n\n\t\t\t Your average " << avg << " is equivalent to 1.50" << endl;
     }
     else if(avg <= 90 && avg >=88){
-        cout << "\n\nYour average " << avg << " is equivalent to 1.75" << endl;
+        cout << "\n\n\t\t\t Your average " << avg << " is equivalent to 1.75" << endl;
     }
     else if(avg <= 87 && avg >=85){
-        cout << "\nYour average " << avg << " is equivalent to 2.00" << endl;
+        cout << "\n\n\t\t\t Your average " << avg << " is equivalent to 2.00" << endl;
     }
     else if(avg <= 84 && avg >=82){
-        cout << "\nYour average " << avg << " is equivalent to 2.25" << endl;
+        cout << "\n\n\t\t\t Your average " << avg << " is equivalent to 2.25" << endl;
     }
     else if(avg <= 81 && avg >=79){
-        cout << "\nYour average " << avg << " is equivalent to 2.50" << endl;
+        cout << "\n\n\t\t\t Your average " << avg << " is equivalent to 2.50" << endl;
     }
-    else if(avg <= 76 && avg >=78){
-        cout << "\nYour average " << avg << " is equivalent to 2.75" << endl;
+    else if(avg <= 78 && avg >=76){
+        cout << "\n\n\t\t\t Your average " << avg << " is equivalent to 2.75" << endl;
     }
     else if(avg == 75){
-        cout << "\nYour average " << avg << " is equivalent to 3.00" << endl;
+        cout << "\n\n\t\t\t Your average " << avg << " is equivalent to 3.00" << endl;
     }
     else{ // if all condition above are not met
-        cout << "\nYour average " << avg << " is equivalent to 5.00" << endl;
+        cout << "\n\n\t\t\t Your average " << avg << " is equivalent to 5.00" << endl;
     }
 }
 
@@ -496,31 +510,44 @@ void calculator(){
     char op_input;
     double result, num1, num2;
 
-    cout << "Enter number 1: ";
+    cout << "\n\t\t\t Enter number 1: ";
     cin >> num1;
-    cout << "Enter number 2: ";
+    cout << "\t\t\t Enter number 2: ";
     cin >> num2;
-    cout << "Select operator ( + , - , * , / ): ";
+    cout << "\n\t\t\t Select operator ( + , - , * , / ): ";
     cin >> op_input;
+    system("cls");
+    cout << "\n\n\t\t\t-----------------------------------------------";
+    cout << "\n\t\t\t|                 CALCULATOR                  |\n\t\t\t-----------------------------------------------\n\n";
+    cout << "\n\t\t\t Calculating";
+    sleep(1);
+    cout << ".";
+    sleep(1);
+    cout << ".";
+    sleep(1);
+    cout << ".";
+    system("cls");
 
+    cout << "\n\n\t\t\t-----------------------------------------------";
+    cout << "\n\t\t\t|                 CALCULATOR                  |\n\t\t\t-----------------------------------------------\n\n";
     if(op_input == '+'){
         result = num1 + num2;
-        cout << num1 << " + " << num2 << " = " << result << endl;
+        cout << "\n\n\t\t\t " << num1 << " + " << num2 << " = " << result << endl;
     }
     else if(op_input == '-'){
         result = num1 - num2;
-        cout << num1 << " - " << num2 << " = " << result << endl;
+        cout << "\n\n\t\t\t " << num1 << " - " << num2 << " = " << result << endl;
     }
     else if(op_input == '*'){
         result = num1 * num2;
-        cout << num1 << " * " << num2 << " = " << result << endl;
+        cout << "\n\n\t\t\t " << num1 << " * " << num2 << " = " << result << endl;
     }
     else if(op_input == '/'){
         result = (double)num1 / (double)num2;
-        cout << num1 << " / " << num2 << " = " << result << endl;
+        cout << "\n\n\t\t\t " << num1 << " / " << num2 << " = " << result << endl;
     }
     else{
-        cout << "Invalid operator.\n";
+        cout << "\n\n\t\t\t " << "Invalid operator.\n";
     }
 }
 
@@ -528,31 +555,33 @@ void calculator(){
 void inc_loop(){
     int start, endv;
 
-	cout << "Note: Starting value must be lower than limit.";
+	cout << "\n\t\t\t Note: Starting value must be lower than limit.";
 	cout << endl;
-    cout << "Enter starting value: ";
+	sleep(1);
+    cout << "\n\n\t\t\t   Enter starting value: ";
     cin >> start;
-    cout << "Enter limit: ";
+    cout << "\t\t\t   Enter limit: ";
     cin >> endv;
 	cout << "\n";
     for(int i = start; i <= endv; i++){
-        cout << i << endl;
+        cout << "\t\t\t " << i << endl;
     }
 }
 
 
 void dec_loop(){
     int endv, start;
-	cout << "Note: Starting point must be lower than end value.";
+	cout << "\n\t\t\t Note: Starting point must be lower than";
+	cout << "\n\t\t\t       end value.";
 	cout << endl;
-	cout << endl;
-	cout << "Enter starting point: ";
+	sleep(1);
+	cout << "\n\n\t\t\t   Enter starting point: ";
     cin >> start;
-    cout << "Enter end value: ";
+    cout << "\t\t\t   Enter end value: ";
     cin >> endv;
-
+    cout << "\n";
     for(int i = endv; i >= start; i--){
-        cout << i << endl;
+        cout << "\t\t\t " << i << endl;
     }
 
 }
@@ -562,13 +591,12 @@ void compilation(){
     int menuChoice;
 
     do{
-        system("cls");
         cout << "\n\n\t\t\t-----------------------------------------------";
-        cout << "\n\t\t\t|          CDM PROGRAMMING ACTIVIES          |\n\t\t\t-----------------------------------------------\n";
+        cout << "\n\t\t\t|         CDM PROGRAMMING ACTIVITIES          |\n\t\t\t-----------------------------------------------\n";
         cout << "\n\t\t\t\t(1) Hello World\n";
         cout << "\t\t\t\t(2) House\n";
-        cout << "\t\t\t\t(3) Lower Number Identifier\n";
-        cout << "\t\t\t\t(4) Higher Number Identifier\n";
+        cout << "\t\t\t\t(3) Lowest Number Identifier\n";
+        cout << "\t\t\t\t(4) Highest Number Identifier\n";
         cout << "\t\t\t\t(5) Average Grade Calculator\n";
         cout << "\t\t\t\t(6) Calculator\n";
         cout << "\t\t\t\t(7) Increment Looping\n";
@@ -577,159 +605,228 @@ void compilation(){
         cout << "\n\t\t\t_______________________________________________\n";
         cout << "\n\t\t\tChoice (0-8): ";
         cin >> menuChoice;
-        sleep(2);
+        sleep(1);
         system("cls");
 
         if(menuChoice==1){
             do{
+                cout << "\n\n\t\t\t-----------------------------------------------";
+                cout << "\n\t\t\t|                 HELLO WORLD                 |\n\t\t\t-----------------------------------------------\n\n\n\t\t\t\t\t  ";
+                sleep(1);
                 hello_world();
-                cout << "(1) Display again\n";
-                cout << "(0) Back\n";
-                cout << "Choice: ";
+                sleep(1.5);
+                cout << "\n\n\n\t\t\t   (1) Display again\n";
+                cout << "\t\t\t   (0) Back\n";
+                cout << "\n\n\t\t\t   Choice: ";
                 cin >> menuChoice;
                 system("cls");
-                cout << "Loading ";
+                cout << "\n\n\t\t\t-----------------------------------------------";
+                cout << "\n\t\t\t|                 HELLO WORLD                 |\n\t\t\t-----------------------------------------------\n";
+                cout << "\n\t\t\t Loading";
                 sleep(1);
                 cout << ".";
                 sleep(1);
                 cout << ".";
                 sleep(1);
                 cout << ".";
+                sleep(1);
                 system("cls");
             }while(menuChoice==1);
 
         }
         else if(menuChoice==2){
             do{
+                cout << "\n\n\t\t\t-----------------------------------------------";
+                cout << "\n\t\t\t|                    HOUSE                    |\n\t\t\t-----------------------------------------------\n\n";
+                sleep(1);
                 house();
-                cout << "(1) Display again\n";
-                cout << "(0) Back\n";
-                cout << "Choice: ";
+                sleep(1.5);
+                cout << "\n\n\n\t\t\t   (1) Display again\n";
+                cout << "\t\t\t   (0) Back\n";
+                cout << "\n\n\t\t\t   Choice: ";
                 cin >> menuChoice;
                 system("cls");
-                cout << "Loading ";
+                cout << "\n\n\t\t\t-----------------------------------------------";
+                cout << "\n\t\t\t|                    HOUSE                    |\n\t\t\t-----------------------------------------------\n\n";
+                cout << "\n\t\t\t Loading";
                 sleep(1);
                 cout << ".";
                 sleep(1);
                 cout << ".";
                 sleep(1);
                 cout << ".";
+                sleep(1);
                 system("cls");
             }while(menuChoice==1);
         }
         else if(menuChoice==3){
             do{
+                cout << "\n\n\t\t\t-----------------------------------------------";
+                cout << "\n\t\t\t|           LOWEST NUMBER IDENTIFIER          |\n\t\t\t-----------------------------------------------\n\n";
+                sleep(1);
                 lower_number();
-                cout << "(1) Display again\n";
-                cout << "(0) Back\n";
-                cout << "Choice: ";
+                sleep(1.5);
+                cout << "\n\n\n\t\t\t   (1) Display again\n";
+                cout << "\t\t\t   (0) Back\n";
+                cout << "\n\n\t\t\t   Choice: ";
                 cin >> menuChoice;
                 system("cls");
-                cout << "Loading ";
+                cout << "\n\n\t\t\t-----------------------------------------------";
+                cout << "\n\t\t\t|           LOWEST NUMBER IDENTIFIER          |\n\t\t\t-----------------------------------------------\n\n";
+                cout << "\n\t\t\t Loading";
                 sleep(1);
                 cout << ".";
                 sleep(1);
                 cout << ".";
                 sleep(1);
                 cout << ".";
+                sleep(1);
                 system("cls");
             }while(menuChoice==1);
         }
         else if(menuChoice==4){
             do{
+                cout << "\n\n\t\t\t-----------------------------------------------";
+                cout << "\n\t\t\t|          HIGHEST NUMBER IDENTIFIER          |\n\t\t\t-----------------------------------------------\n\n";
+                sleep(1);
                 higher_number();
-                cout << "(1) Display again\n";
-                cout << "(0) Back\n";
-                cout << "Choice: ";
+                sleep(1.5);
+                cout << "\n\n\n\t\t\t   (1) Display again\n";
+                cout << "\t\t\t   (0) Back\n";
+                cout << "\n\n\t\t\t   Choice: ";
                 cin >> menuChoice;
                 system("cls");
-                cout << "Loading ";
+                cout << "\n\n\t\t\t-----------------------------------------------";
+                cout << "\n\t\t\t|          HIGHEST NUMBER IDENTIFIER          |\n\t\t\t-----------------------------------------------\n\n";
+                cout << "\n\t\t\t Loading";
                 sleep(1);
                 cout << ".";
                 sleep(1);
                 cout << ".";
                 sleep(1);
                 cout << ".";
+                sleep(1);
                 system("cls");
             }while(menuChoice==1);
         }
         else if(menuChoice==5){
             do{
+                cout << "\n\n\t\t\t-----------------------------------------------";
+                cout << "\n\t\t\t|          AVERAGE GRADE CALCULATOR           |\n\t\t\t-----------------------------------------------\n\n";
+                sleep(1);
                 avg_calcu();
-                cout << "(1) Display again\n";
-                cout << "(0) Back\n";
-                cout << "Choice: ";
+                sleep(1.5);
+                cout << "\n\n\n\t\t\t   (1) Display again\n";
+                cout << "\t\t\t   (0) Back\n";
+                cout << "\n\n\t\t\t   Choice: ";
                 cin >> menuChoice;
                 system("cls");
-                cout << "Loading ";
+                cout << "\n\n\t\t\t-----------------------------------------------";
+                cout << "\n\t\t\t|          AVERAGE GRADE CALCULATOR           |\n\t\t\t-----------------------------------------------\n\n";
+                cout << "\n\t\t\t Loading";
                 sleep(1);
                 cout << ".";
                 sleep(1);
                 cout << ".";
                 sleep(1);
                 cout << ".";
+                sleep(1);
                 system("cls");
             }while(menuChoice==1);
         }
         else if(menuChoice==6){
             do{
+                cout << "\n\n\t\t\t-----------------------------------------------";
+                cout << "\n\t\t\t|                 CALCULATOR                  |\n\t\t\t-----------------------------------------------\n\n";
+                sleep(1);
                 calculator();
-                cout << "(1) Display again\n";
-                cout << "(0) Back\n";
-                cout << "Choice: ";
+                sleep(1.5);
+                cout << "\n\n\n\t\t\t   (1) Display again\n";
+                cout << "\t\t\t   (0) Back\n";
+                cout << "\n\n\t\t\t   Choice: ";
                 cin >> menuChoice;
                 system("cls");
-                cout << "Loading ";
+                cout << "\n\n\t\t\t-----------------------------------------------";
+                cout << "\n\t\t\t|                 CALCULATOR                  |\n\t\t\t-----------------------------------------------\n\n";
+                cout << "\n\t\t\t Loading";
                 sleep(1);
                 cout << ".";
                 sleep(1);
                 cout << ".";
                 sleep(1);
                 cout << ".";
+                sleep(1);
                 system("cls");
             }while(menuChoice==1);
         }
         else if(menuChoice==7){
             do{
+                cout << "\n\n\t\t\t-----------------------------------------------";
+                cout << "\n\t\t\t|              INCREMENT LOOPING              |\n\t\t\t-----------------------------------------------\n\n";
+                sleep(1);
                 inc_loop();
-                cout << "(1) Display again\n";
-                cout << "(0) Back\n";
-                cout << "Choice: ";
+                sleep(1.5);
+                cout << "\n\n\n\t\t\t   (1) Display again\n";
+                cout << "\t\t\t   (0) Back\n";
+                cout << "\n\n\t\t\t   Choice: ";
                 cin >> menuChoice;
                 system("cls");
-                cout << "Loading ";
+                cout << "\n\n\t\t\t-----------------------------------------------";
+                cout << "\n\t\t\t|              INCREMENT LOOPING              |\n\t\t\t-----------------------------------------------\n\n";
+                sleep(1);
+                cout << "\n\t\t\t Loading";
                 sleep(1);
                 cout << ".";
                 sleep(1);
                 cout << ".";
                 sleep(1);
                 cout << ".";
+                sleep(1);
                 system("cls");
             }while(menuChoice==1);
         }
         else if(menuChoice==8){
             do{
+                cout << "\n\n\t\t\t-----------------------------------------------";
+                cout << "\n\t\t\t|              DECREMENT LOOPING              |\n\t\t\t-----------------------------------------------\n\n";
+                sleep(1);
                 dec_loop();
-                cout << "(1) Display again\n";
-                cout << "(0) Back\n";
-                cout << "Choice: ";
+                sleep(1.5);
+                cout << "\n\n\n\t\t\t   (1) Display again\n";
+                cout << "\t\t\t   (0) Back\n";
+                cout << "\n\n\t\t\t   Choice: ";
                 cin >> menuChoice;
                 system("cls");
-                cout << "Loading ";
+                cout << "\n\n\t\t\t-----------------------------------------------";
+                cout << "\n\t\t\t|              DECREMENT LOOPING              |\n\t\t\t-----------------------------------------------\n\n";
+                sleep(1);
+                cout << "\n\t\t\t Loading";
                 sleep(1);
                 cout << ".";
                 sleep(1);
                 cout << ".";
                 sleep(1);
                 cout << ".";
+                sleep(1);
                 system("cls");
             }while(menuChoice==1);
         }
         else if(menuChoice==0){
+            system("cls");
+            sleep(1);
+            cout << "\n   Logging out";
+            sleep(1);
+            cout << ".";
+            sleep(1);
+            cout << ".";
+            sleep(1);
+            cout << ".";
+            sleep(1);
+            system("cls");
             menu();
         }
         else{
-            cout << "Invalid input, Try again\nMenu\n\n";
+            cout << "Invalid input. Try again\nMenu\n\n";
             compilation();
             system("cls");
         }
@@ -783,14 +880,29 @@ void menu(){
             case 4:
                 do{
                     delete_usr();
-                    cout << "\n\n\t\t\t  (1) Try again\n";
+                    cout << "\n\n\t\t\t  (1) Again\n";
                     cout << "\t\t\t  (0) Back\n";
                     cout << "\n\n\t\t\t Choice: ";
                     cin >> menuChoice;
                     sleep(2);
                     system("cls");
                 }while(menuChoice==1);
+                break;
             case 5:
+                system("cls");
+                cout << "Are you sure you want to exit?\n\n";
+                cout << "   (1) Yes \n   (0) No\n\n";
+                cout << "Choice: ";
+                cin >> menuChoice;
+                if(menuChoice==0){
+                    menu();
+                }
+                else if(menuChoice==1){
+                    break;
+                }
+                else{
+                    cout << "invalid input\n";
+                }
                 break;
             default:
                 menu();
@@ -807,5 +919,4 @@ int main(){
     loading();
     menu();
     system("cls");
-
 }
