@@ -2,6 +2,10 @@
 
 Colegio De Montalban 1st year students of Computer Engineering.
 
+1st Semester Final term project. Compilation of previous programming activites with login system.
+
+
+Members:  
 CONSTANTINO, VAN JOSEPH B.
 
 BAGASIN, PRINCESS MELODY P.
