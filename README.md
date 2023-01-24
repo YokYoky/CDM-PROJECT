@@ -7,10 +7,10 @@ Colegio De Montalban 1st year students of Computer Engineering.
 
 Members:  
 CONSTANTINO, VAN JOSEPH B.  
-BAGASIN, PRINCESS MELODY P. 
+BAGASIN, PRINCESS MELODY P.   
 UBALDE, JOY ANGELIE B.  
 DELA CRUZ, CHRISTIAN RALPH  
 AGCAOILI, PRINCESS MAE N. 
 
-Instructor: 
+Instructor:   
 Sir. Navarro, Jayson Bryan
