@@ -29,33 +29,35 @@ void group();
 
 void group(){
     system(" Color 0A ");
+    cout << "\n\n\t\t\t     DDDDDDDD   IIIIIIII EEEEEEEE NNN     NNN   AAAAAA\n";
+    cout << "\t\t\t     DDDDDDDDD  IIIIIIII EEEEEEEE NNNN    NNN  AAAAAAAA\n";
+    cout << "\t\t\t     DDD    DDD   IIII   EEE      NNNNN   NNN AAA    AAA\n";
+    cout << "\t\t\t     DDD    DDDD  IIII   EEEEEEEE NNN NN  NNN AAA    AAA\n";
+    cout << "\t\t\t     DDD    DDDD  IIII   EEEEEEEE NNN NN  NNN AAAAAAAAAA\n";
+    cout << "\t\t\t     DDD    DDDD  IIII   EEEEEEEE NNN  NN NNN AAAAAAAAAA\n";
+    cout << "\t\t\t     DDD    DDD   IIII   EEE      NNN   N NNN AAA    AAA\n";
+    cout << "\t\t\t     DDDDDDDDD  IIIIIIII EEEEEEEE NNN   NNNNN AAA    AAA\n";
+    cout << "\t\t\t     DDDDDDDD   IIIIIIII EEEEEEEE NNN    NNNN AAA    AAA\n";
+    cout << "\t\t\t:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::";
 	cout<<("\t\t\t\t\t\t                 ")<<endl;
-	cout<<("\t\t\t\t\t\t         млпллллм")<<endl;
-	cout<<("\t\t\t\t\t\t         лллллллл")<<endl;
-	cout<<("\t\t\t\t\t\t         лллллппп GROUP 3!!!")<<endl;
-	cout<<("\t\t\t\t\t\t л      мллллппп  CONSTANTINO")<<endl;
-	cout<<("\t\t\t\t\t\t ллм  мллллллммм  DELA CRUZ")<<endl;
-	cout<<("\t\t\t\t\t\t пллллллллллл  п  BAGASIN")<<endl;
-	cout<<("\t\t\t\t\t\t   плллллллп      UBALDE")<<endl;
-	cout<<("\t\t\t\t\t\t    ллп пл        AGCAOILI")<<endl;
-	cout<<("\t\t\t\t\t\t   лм   лм      ")<<endl;
-	cout<<("\t\t\t\t\t\t   плл  ппп    ")<<endl;
-	cout << "||=========       ||||     ||||==============     ||\\\\      ||         //===========\\\\ \n";
-	cout << "||         \\\\     ||||     ||||==============     || \\\\     ||       ||              ||\n";
-	cout << "||          ||    ||||     ||||                   ||  \\\\    ||       ||              ||\n";
-	cout << "||          ||    ||||     ||||                   ||   \\\\   ||       ||              ||\n";
-	cout << "||          ||    ||||     ||||                   ||    \\\\  ||       ||              ||\n";
-	cout << "||          ||    ||||     ||||                   ||     \\\\ ||       ||              ||\n";
-	cout << "||          ||    ||||     ||||==============     ||      \\\\||       ||==============||\n";
-	cout << "||          ||    ||||     ||||==============     ||       \\\\|       ||              ||\n";
-	cout << "||          ||    ||||     ||||                   ||        ||       ||              ||\n";
-	cout << "||          ||    ||||     ||||                   ||        ||       ||              ||\n";
-	cout << "||          ||    ||||     ||||                   ||        ||       ||              ||\n";
-	cout << "||          ||    ||||     ||||                   ||        ||       ||              ||\n";
-	cout << "||         //     ||||     ||||==============     ||        ||       ||              ||\n";
-	cout << "||=========       ||||     ||||==============     ||        ||       ||              ||\n";
-	sleep(5);
-	system("cls");
+	cout<<("\t\t\t GROUP 3:                                 млпллллм");
+	cout<<("\n\t\t\t  (*) Constantino, Van Joseph B           лллллллл")<<endl;
+	cout<<("\t\t\t  (*) Bagasin, Princess Melody P.         лллллппп")<<endl;
+	cout<<("\t\t\t  (*) Ubalde, Angelie Joy B.      л      мллллппп  ")<<endl;
+	cout<<("\t\t\t  (*) Dela Cruz, Christian Ralph  ллм  мллллллммм")<<endl;
+	cout<<("\t\t\t  (*) Agcaoili, Princess Mae N.   пллллллллллл  п")<<endl;
+	cout<<("\t\t\t\t                              плллллллп")<<endl;
+	cout<<("\t\t\t\t                               ллп пл")<<endl;
+	cout<<("\t\t\t\t                              лм   лм      ")<<endl;
+	cout<<("\t\t\t\t                              плл  ппп    ")<<endl;
+	cout << "\t\t\t:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::";
+	cout << "\n\t\t\t|||| ||||  |||  |||| ||   ||| || || |||| || || ||||||||  ||||";
+    cout << "\n\t\t\t|| |||| |||| ||||    ||  || |||| ||||    || ||||   || ||||";
+    cout << "\n\t\t\t|||| |||| || |||| || ||  ||||||| |||| || ||||||||| |||| |||||";
+    cout << "\n\t\t\t||   ||\\\\ || ||||  ||||  || |||| ||||  |||| ||||   ||\\\\    ||";
+    cout << "\n\t\t\t||   || \\\\ |||  |||| |||||| || |||  |||| || || |||||| \\\\||||\n\t\t\t";
+    system("pause");
+    system("cls");
 }
 
 
@@ -340,7 +342,7 @@ void delete_usr(){
             sleep(1);
             system("cls");
             cout << "\n\n\t\t\t-----------------------------------------------";
-            cout << "\n\t\t\t|            DELETE ACCOUNT              |\n\t\t\t-----------------------------------------------\n";
+            cout << "\n\t\t\t|               DELETE ACCOUNT               |\n\t\t\t-----------------------------------------------\n";
             cout << "\n\t\t\t Account deleted.\n";
             sleep(1.5);
         }
@@ -411,6 +413,7 @@ void lower_number(){
     else if (v3 < v1 && v3 < v2 && v3 < v4){
         cout << "\n\n\t\t\t " << v3 << " is the lowest number. " ;
     }
+
     else{
         cout << "\n\n\t\t\t " << v4 << " is the lowest number. ";
     }
@@ -891,10 +894,10 @@ void menu(){
             case 5:
                 system("cls");
                 cout << "Are you sure you want to exit?\n\n";
-                cout << "   (1) Yes \n   (0) No\n\n";
+                cout << "   (1) Yes \n   (2) No\n\n";
                 cout << "Choice: ";
                 cin >> menuChoice;
-                if(menuChoice==0){
+                if(menuChoice==2){
                     menu();
                 }
                 else if(menuChoice==1){
@@ -910,7 +913,6 @@ void menu(){
         }
     }while(menuChoice==0);
 }
-
 
 int main(){
 
